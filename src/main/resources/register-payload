@@ -1,0 +1,91 @@
+{
+    "username": "askacool",
+    "password": "askacool",
+    "email": "askacool@otis.com",
+    "roles": [
+        {
+            "name": "admin",
+            "permissions": [
+                "READ",
+                "WRITE",
+                "UPDATE",
+                "DELETE"
+            ]
+        },
+        {
+            "name": "mod",
+            "permissions": [
+                "READ",
+                "WRITE",
+                "UPDATE",
+                "DELETE"
+            ]
+        },
+        {
+            "name": "user",
+            "permissions": [
+                "READ",
+                "WRITE",
+                "UPDATE",
+                "DELETE"
+            ]
+        }
+    ]
+}
+
+=================================================
+
+{
+    "username": "renopratama",
+    "password": "renopratama",
+    "email": "renopratama@otis.com",
+    "roles": [
+        {
+            "name": "mod",
+            "permissions": [
+                "READ",
+                "WRITE",
+                "UPDATE",
+                "DELETE"
+            ]
+        }
+    ]
+}
+
+=================================================
+
+{
+    "username": "tejosuratman",
+    "password": "tejosuratman",
+    "email": "tejosuratman@otis.com",
+    "roles": [
+        {
+            "name": "user",
+            "permissions": [
+                "READ",
+                "WRITE",
+                "UPDATE",
+                "DELETE"
+            ]
+        }
+    ]
+}
+
+=================================================
+
+{
+    "username": "xxxxx",
+    "password": "xxxxxxxxx",
+    "email": "xxx@otis.com",
+    "roles": [
+        {
+            "name": "xxx",
+            "permissions": [
+                "READ",
+                "WRITE",
+                "UPDATE",
+                "DELETE"
+            ]
+        }
+    ]
+}

@@ -1,0 +1,62 @@
+{
+  "$id": "http://otis.com/schema/signup.json",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Sign Up Request",
+  "description": "Payload for sign up",
+  "type": "object",
+  "properties": {
+    "username": {
+      "description": "set username for new user",
+      "type": "string",
+      "minLength": 5,
+      "maxLength": 15
+    },
+    "password": {
+      "description": "set password for new user",
+      "type" : "string",
+      "minLength": 8
+    },
+    "email": {
+      "description": "set email for new user",
+      "type": "string",
+      "format": "email"
+    },
+    "group": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "enum": [ "FINANCE", "IT", "SALES", "HR", "MARKETING", "LEGAL" ]
+        },
+        "roles": {
+          "type": "array",
+          "items": [
+            {
+              "type": "object",
+              "properties": {
+                "name": {
+                  "type": "string",
+                  "enum": [ "CHIEF", "VP", "MANAGER", "LEADER", "MEMBER" ]
+                },
+                "permissions": {
+                  "type": "array",
+                  "minItems": 1,
+                  "uniqueItems": true,
+                  "items": [
+                    {
+                      "type": "string",
+                      "enum": [ "READ", "WRITE", "UPDATE", "DELETE" ]
+                    }
+                  ]
+                }
+              },
+              "required": [ "name", "permissions" ]
+            }
+          ]
+        }
+      },
+      "required": [ "name", "roles" ]
+    }
+  },
+  "required": [ "username", "password", "email", "group" ]
+}

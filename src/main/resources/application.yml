@@ -1,0 +1,57 @@
+# Server
+server:
+  port: 6060
+
+# JWT
+app:
+  jwtSecret: 4m9DoxTiyHffSmF
+  jwtExpirationMs: 86400000
+
+# Jasypt
+jasypt:
+  encryptor:
+    bean: encryptorBean
+
+# Database
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/tutorial-db
+    username: root
+    password: ENC(LkOJ4zhgC4hNf0T8mfHwcdEAurCp1rLcpihxO3iH+ip6Kuj0Ea+KoveukqSq40xl)
+
+  # JPA (JpaBaseConfiguration, HibernateJpaAutoConfiguration)
+  jpa:
+    hibernate:
+      # DDL mode (create, create-drop, validate, update).
+      # This is actually a shortcut for the "hibernate.hbm2ddl.auto" property.
+      # Defaults to "create-drop" when using an embedded database and no schema manager was detected.
+      # Otherwise, defaults to "none".
+      ddl-auto: update
+
+    # Whether to enable logging of SQL statements.
+    show-sql: true
+
+    # Hibernate additional native properties to set on the JPA provider.
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQLDialect
+        current_session_context_class: thread
+        format_sql: true
+
+# Swagger OpenAPI Description Path
+springdoc:
+  packagesToScan: otis.playground.authentication
+  api-docs:
+    # custom path
+    path: /api-docs
+
+  swagger-ui:
+    # sorting endpoints alphabetically
+    operationsSorter: method
+
+    # sorting tags alphabetically
+    tagsSorter: alpha
+
+    # hide generated schema
+    defaultModelsExpandDepth: -1

@@ -1,0 +1,21 @@
+{
+  "$id": "http://otis.com/schema/signin.json",
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Sign In Request",
+  "description": "Payload for sign in",
+  "type": "object",
+  "properties": {
+    "username": {
+      "description": "username for existing user",
+      "type": "string",
+      "minLength": 5,
+      "maxLength": 15
+    },
+    "password": {
+      "description": "password for existing user",
+      "type": "string",
+      "minLength": 8
+    }
+  },
+  "required": [ "username", "password" ]
+}
